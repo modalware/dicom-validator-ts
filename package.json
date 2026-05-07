@@ -45,7 +45,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@innolitics/dicom-standard": "^0.1.0",
     "dcmjs": "^0.33.0",
     "yargs": "^17.7.2"
   },

@@ -97,26 +97,32 @@ const json = result.toJSON();
 ## CLI Usage
 
 ```bash
-npx dicom-validator <files...> [options]
+npx dicom-validator-ts <files...> [options]
+```
+
+If installed globally (`npm install -g dicom-validator-ts`), the command is available as `dicom-validator`:
+
+```bash
+dicom-validator <files...> [options]
 ```
 
 ### Examples
 
 ```bash
 # Validate a single file
-npx dicom-validator scan.dcm
+npx dicom-validator-ts scan.dcm
 
 # Validate multiple files
-npx dicom-validator *.dcm
+npx dicom-validator-ts *.dcm
 
 # Output as JSON
-npx dicom-validator scan.dcm --format json
+npx dicom-validator-ts scan.dcm --format json
 
 # Only show errors (suppress warnings and info)
-npx dicom-validator scan.dcm --quiet
+npx dicom-validator-ts scan.dcm --quiet
 
 # Override SOP Class
-npx dicom-validator scan.dcm --sop-class 1.2.840.10008.5.1.4.1.1.2
+npx dicom-validator-ts scan.dcm --sop-class 1.2.840.10008.5.1.4.1.1.2
 ```
 
 ### Options
