@@ -35,6 +35,14 @@
     "healthcare",
     "dicom-standard"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tatsu/dicom-validator-ts.git"
+  },
+  "homepage": "https://github.com/tatsu/dicom-validator-ts#readme",
+  "bugs": {
+    "url": "https://github.com/tatsu/dicom-validator-ts/issues"
+  },
   "license": "MIT",
   "dependencies": {
     "@innolitics/dicom-standard": "^0.1.0",
