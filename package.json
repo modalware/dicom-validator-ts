@@ -1,0 +1,53 @@
+{
+  "name": "dicom-validator-ts",
+  "version": "0.1.0",
+  "description": "A TypeScript library for validating DICOM files against the DICOM standard (PS3.3, PS3.6). Provides both a programmatic API and CLI tool.",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "bin": {
+    "dicom-validator": "./dist/cli/index.mjs"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "lint": "tsc --noEmit"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE",
+    "CONTRIBUTING.md",
+    "SECURITY.md"
+  ],
+  "keywords": [
+    "dicom",
+    "validator",
+    "medical-imaging",
+    "healthcare",
+    "dicom-standard"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@innolitics/dicom-standard": "^0.1.0",
+    "dcmjs": "^0.33.0",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@fast-check/vitest": "^0.1.3",
+    "@types/node": "^20.11.0",
+    "@types/yargs": "^17.0.32",
+    "fast-check": "^3.15.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0",
+    "vitest": "^2.0.0"
+  }
+}

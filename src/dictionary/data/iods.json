@@ -1,0 +1,30 @@
+[
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.2",
+    "sopClassName": "CT Image Storage",
+    "modules": [
+      { "moduleId": "patient", "moduleName": "Patient", "usage": "M" },
+      { "moduleId": "general-study", "moduleName": "General Study", "usage": "M" },
+      { "moduleId": "general-series", "moduleName": "General Series", "usage": "M" },
+      { "moduleId": "general-equipment", "moduleName": "General Equipment", "usage": "M" },
+      { "moduleId": "general-image", "moduleName": "General Image", "usage": "M" },
+      { "moduleId": "image-plane", "moduleName": "Image Plane", "usage": "M" },
+      { "moduleId": "image-pixel", "moduleName": "Image Pixel", "usage": "M" },
+      { "moduleId": "ct-image", "moduleName": "CT Image", "usage": "M" }
+    ]
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.4",
+    "sopClassName": "MR Image Storage",
+    "modules": [
+      { "moduleId": "patient", "moduleName": "Patient", "usage": "M" },
+      { "moduleId": "general-study", "moduleName": "General Study", "usage": "M" },
+      { "moduleId": "general-series", "moduleName": "General Series", "usage": "M" },
+      { "moduleId": "general-equipment", "moduleName": "General Equipment", "usage": "M" },
+      { "moduleId": "general-image", "moduleName": "General Image", "usage": "M" },
+      { "moduleId": "image-plane", "moduleName": "Image Plane", "usage": "M" },
+      { "moduleId": "image-pixel", "moduleName": "Image Pixel", "usage": "M" },
+      { "moduleId": "mr-image", "moduleName": "MR Image", "usage": "M" }
+    ]
+  }
+]
