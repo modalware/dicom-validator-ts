@@ -1,30 +1,1009 @@
 [
   {
+    "sopClassUID": "1.2.840.10008.1.3.10",
+    "sopClassName": "Media Storage Directory Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.1",
+    "sopClassName": "Computed Radiography Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.1.1",
+    "sopClassName": "Digital X-Ray Image Storage - For Presentation",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.1.1.1",
+    "sopClassName": "Digital X-Ray Image Storage - For Processing",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.1.2",
+    "sopClassName": "Digital Mammography X-Ray Image Storage - For Presentation",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.1.2.1",
+    "sopClassName": "Digital Mammography X-Ray Image Storage - For Processing",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.1.3",
+    "sopClassName": "Digital Intra-Oral X-Ray Image Storage - For Presentation",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.1.3.1",
+    "sopClassName": "Digital Intra-Oral X-Ray Image Storage - For Processing",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.104.1",
+    "sopClassName": "Encapsulated PDF Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.104.2",
+    "sopClassName": "Encapsulated CDA Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.104.3",
+    "sopClassName": "Encapsulated STL Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.104.4",
+    "sopClassName": "Encapsulated OBJ Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.104.5",
+    "sopClassName": "Encapsulated MTL Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.11.1",
+    "sopClassName": "Grayscale Softcopy Presentation State Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.11.10",
+    "sopClassName": "Segmented Volume Rendering Volumetric Presentation State Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.11.11",
+    "sopClassName": "Multiple Volume Rendering Volumetric Presentation State Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.11.12",
+    "sopClassName": "Variable Modality LUT Softcopy Presentation State Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.11.2",
+    "sopClassName": "Color Softcopy Presentation State Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.11.3",
+    "sopClassName": "Pseudo-Color Softcopy Presentation State Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.11.4",
+    "sopClassName": "Blending Softcopy Presentation State Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.11.5",
+    "sopClassName": "XA/XRF Grayscale Softcopy Presentation State Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.11.6",
+    "sopClassName": "Grayscale Planar MPR Volumetric Presentation State Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.11.7",
+    "sopClassName": "Compositing Planar MPR Volumetric Presentation State Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.11.8",
+    "sopClassName": "Advanced Blending Presentation State Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.11.9",
+    "sopClassName": "Volume Rendering Volumetric Presentation State Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.12.1",
+    "sopClassName": "X-Ray Angiographic Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.12.1.1",
+    "sopClassName": "Enhanced XA Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.12.2",
+    "sopClassName": "X-Ray Radiofluoroscopic Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.12.2.1",
+    "sopClassName": "Enhanced XRF Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.128",
+    "sopClassName": "Positron Emission Tomography Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.128.1",
+    "sopClassName": "Legacy Converted Enhanced PET Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.13.1.1",
+    "sopClassName": "X-Ray 3D Angiographic Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.13.1.2",
+    "sopClassName": "X-Ray 3D Craniofacial Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.13.1.3",
+    "sopClassName": "Breast Tomosynthesis Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.13.1.4",
+    "sopClassName": "Breast Projection X-Ray Image Storage - For Presentation",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.13.1.5",
+    "sopClassName": "Breast Projection X-Ray Image Storage - For Processing",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.130",
+    "sopClassName": "Enhanced PET Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.131",
+    "sopClassName": "Basic Structured Display Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.14.1",
+    "sopClassName": "Intravascular Optical Coherence Tomography Image Storage - For Presentation",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.14.2",
+    "sopClassName": "Intravascular Optical Coherence Tomography Image Storage - For Processing",
+    "modules": []
+  },
+  {
     "sopClassUID": "1.2.840.10008.5.1.4.1.1.2",
     "sopClassName": "CT Image Storage",
     "modules": [
-      { "moduleId": "patient", "moduleName": "Patient", "usage": "M" },
-      { "moduleId": "general-study", "moduleName": "General Study", "usage": "M" },
-      { "moduleId": "general-series", "moduleName": "General Series", "usage": "M" },
-      { "moduleId": "general-equipment", "moduleName": "General Equipment", "usage": "M" },
-      { "moduleId": "general-image", "moduleName": "General Image", "usage": "M" },
-      { "moduleId": "image-plane", "moduleName": "Image Plane", "usage": "M" },
-      { "moduleId": "image-pixel", "moduleName": "Image Pixel", "usage": "M" },
-      { "moduleId": "ct-image", "moduleName": "CT Image", "usage": "M" }
+      {
+        "moduleId": "patient",
+        "moduleName": "Patient",
+        "usage": "M"
+      },
+      {
+        "moduleId": "general-study",
+        "moduleName": "General Study",
+        "usage": "M"
+      },
+      {
+        "moduleId": "general-series",
+        "moduleName": "General Series",
+        "usage": "M"
+      },
+      {
+        "moduleId": "general-equipment",
+        "moduleName": "General Equipment",
+        "usage": "M"
+      },
+      {
+        "moduleId": "general-image",
+        "moduleName": "General Image",
+        "usage": "M"
+      },
+      {
+        "moduleId": "image-plane",
+        "moduleName": "Image Plane",
+        "usage": "M"
+      },
+      {
+        "moduleId": "image-pixel",
+        "moduleName": "Image Pixel",
+        "usage": "M"
+      },
+      {
+        "moduleId": "ct-image",
+        "moduleName": "CT Image",
+        "usage": "M"
+      }
     ]
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.2.1",
+    "sopClassName": "Enhanced CT Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.2.2",
+    "sopClassName": "Legacy Converted Enhanced CT Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.20",
+    "sopClassName": "Nuclear Medicine Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.200.1",
+    "sopClassName": "CT Defined Procedure Protocol Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.200.2",
+    "sopClassName": "CT Performed Procedure Protocol Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.200.3",
+    "sopClassName": "Protocol Approval Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.200.7",
+    "sopClassName": "XA Defined Procedure Protocol Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.200.8",
+    "sopClassName": "XA Performed Procedure Protocol Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.201.1",
+    "sopClassName": "Inventory Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.3.1",
+    "sopClassName": "Ultrasound Multi-frame Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.30",
+    "sopClassName": "Parametric Map Storage",
+    "modules": []
   },
   {
     "sopClassUID": "1.2.840.10008.5.1.4.1.1.4",
     "sopClassName": "MR Image Storage",
     "modules": [
-      { "moduleId": "patient", "moduleName": "Patient", "usage": "M" },
-      { "moduleId": "general-study", "moduleName": "General Study", "usage": "M" },
-      { "moduleId": "general-series", "moduleName": "General Series", "usage": "M" },
-      { "moduleId": "general-equipment", "moduleName": "General Equipment", "usage": "M" },
-      { "moduleId": "general-image", "moduleName": "General Image", "usage": "M" },
-      { "moduleId": "image-plane", "moduleName": "Image Plane", "usage": "M" },
-      { "moduleId": "image-pixel", "moduleName": "Image Pixel", "usage": "M" },
-      { "moduleId": "mr-image", "moduleName": "MR Image", "usage": "M" }
+      {
+        "moduleId": "patient",
+        "moduleName": "Patient",
+        "usage": "M"
+      },
+      {
+        "moduleId": "general-study",
+        "moduleName": "General Study",
+        "usage": "M"
+      },
+      {
+        "moduleId": "general-series",
+        "moduleName": "General Series",
+        "usage": "M"
+      },
+      {
+        "moduleId": "general-equipment",
+        "moduleName": "General Equipment",
+        "usage": "M"
+      },
+      {
+        "moduleId": "general-image",
+        "moduleName": "General Image",
+        "usage": "M"
+      },
+      {
+        "moduleId": "image-plane",
+        "moduleName": "Image Plane",
+        "usage": "M"
+      },
+      {
+        "moduleId": "image-pixel",
+        "moduleName": "Image Pixel",
+        "usage": "M"
+      },
+      {
+        "moduleId": "mr-image",
+        "moduleName": "MR Image",
+        "usage": "M"
+      }
     ]
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.4.1",
+    "sopClassName": "Enhanced MR Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.4.2",
+    "sopClassName": "MR Spectroscopy Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.4.3",
+    "sopClassName": "Enhanced MR Color Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.4.4",
+    "sopClassName": "Legacy Converted Enhanced MR Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.481.1",
+    "sopClassName": "RT Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.481.10",
+    "sopClassName": "RT Physician Intent Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.481.11",
+    "sopClassName": "RT Segment Annotation Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.481.12",
+    "sopClassName": "RT Radiation Set Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.481.13",
+    "sopClassName": "C-Arm Photon-Electron Radiation Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.481.14",
+    "sopClassName": "Tomotherapeutic Radiation Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.481.15",
+    "sopClassName": "Robotic-Arm Radiation Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.481.16",
+    "sopClassName": "RT Radiation Record Set Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.481.17",
+    "sopClassName": "RT Radiation Salvage Record Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.481.18",
+    "sopClassName": "Tomotherapeutic Radiation Record Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.481.19",
+    "sopClassName": "C-Arm Photon-Electron Radiation Record Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.481.2",
+    "sopClassName": "RT Dose Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.481.20",
+    "sopClassName": "Robotic Radiation Record Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.481.21",
+    "sopClassName": "RT Radiation Set Delivery Instruction Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.481.22",
+    "sopClassName": "RT Treatment Preparation Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.481.23",
+    "sopClassName": "Enhanced RT Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.481.24",
+    "sopClassName": "Enhanced Continuous RT Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.481.25",
+    "sopClassName": "RT Patient Position Acquisition Instruction Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.481.3",
+    "sopClassName": "RT Structure Set Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.481.4",
+    "sopClassName": "RT Beams Treatment Record Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.481.5",
+    "sopClassName": "RT Plan Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.481.6",
+    "sopClassName": "RT Brachy Treatment Record Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.481.7",
+    "sopClassName": "RT Treatment Summary Record Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.481.8",
+    "sopClassName": "RT Ion Plan Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.481.9",
+    "sopClassName": "RT Ion Beams Treatment Record Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.501.1",
+    "sopClassName": "DICOS CT Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.501.2.1",
+    "sopClassName": "DICOS Digital X-Ray Image Storage - For Presentation",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.501.2.2",
+    "sopClassName": "DICOS Digital X-Ray Image Storage - For Processing",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.501.3",
+    "sopClassName": "DICOS Threat Detection Report Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.501.4",
+    "sopClassName": "DICOS 2D AIT Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.501.5",
+    "sopClassName": "DICOS 3D AIT Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.501.6",
+    "sopClassName": "DICOS Quadrupole Resonance (QR) Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.6.1",
+    "sopClassName": "Ultrasound Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.6.2",
+    "sopClassName": "Enhanced US Volume Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.6.3",
+    "sopClassName": "Photoacoustic Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.601.1",
+    "sopClassName": "Eddy Current Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.601.2",
+    "sopClassName": "Eddy Current Multi-frame Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.66",
+    "sopClassName": "Raw Data Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.66.1",
+    "sopClassName": "Spatial Registration Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.66.2",
+    "sopClassName": "Spatial Fiducials Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.66.3",
+    "sopClassName": "Deformable Spatial Registration Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.66.4",
+    "sopClassName": "Segmentation Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.66.5",
+    "sopClassName": "Surface Segmentation Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.66.6",
+    "sopClassName": "Tractography Results Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.67",
+    "sopClassName": "Real World Value Mapping Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.68.1",
+    "sopClassName": "Surface Scan Mesh Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.68.2",
+    "sopClassName": "Surface Scan Point Cloud Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.7",
+    "sopClassName": "Secondary Capture Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.7.1",
+    "sopClassName": "Multi-frame Single Bit Secondary Capture Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.7.2",
+    "sopClassName": "Multi-frame Grayscale Byte Secondary Capture Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.7.3",
+    "sopClassName": "Multi-frame Grayscale Word Secondary Capture Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.7.4",
+    "sopClassName": "Multi-frame True Color Secondary Capture Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.77.1.1",
+    "sopClassName": "VL Endoscopic Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.77.1.1.1",
+    "sopClassName": "Video Endoscopic Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.77.1.2",
+    "sopClassName": "VL Microscopic Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.77.1.2.1",
+    "sopClassName": "Video Microscopic Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.77.1.3",
+    "sopClassName": "VL Slide-Coordinates Microscopic Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.77.1.4",
+    "sopClassName": "VL Photographic Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.77.1.4.1",
+    "sopClassName": "Video Photographic Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.77.1.5.1",
+    "sopClassName": "Ophthalmic Photography 8 Bit Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.77.1.5.2",
+    "sopClassName": "Ophthalmic Photography 16 Bit Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.77.1.5.3",
+    "sopClassName": "Stereometric Relationship Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.77.1.5.4",
+    "sopClassName": "Ophthalmic Tomography Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.77.1.5.5",
+    "sopClassName": "Wide Field Ophthalmic Photography Stereographic Projection Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.77.1.5.6",
+    "sopClassName": "Wide Field Ophthalmic Photography 3D Coordinates Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.77.1.5.7",
+    "sopClassName": "Ophthalmic Optical Coherence Tomography En Face Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.77.1.5.8",
+    "sopClassName": "Ophthalmic Optical Coherence Tomography B-scan Volume Analysis Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.77.1.6",
+    "sopClassName": "VL Whole Slide Microscopy Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.77.1.7",
+    "sopClassName": "Dermoscopic Photography Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.77.1.8",
+    "sopClassName": "Confocal Microscopy Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.77.1.9",
+    "sopClassName": "Confocal Microscopy Tiled Pyramidal Image Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.78.1",
+    "sopClassName": "Lensometry Measurements Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.78.2",
+    "sopClassName": "Autorefraction Measurements Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.78.3",
+    "sopClassName": "Keratometry Measurements Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.78.4",
+    "sopClassName": "Subjective Refraction Measurements Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.78.5",
+    "sopClassName": "Visual Acuity Measurements Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.78.6",
+    "sopClassName": "Spectacle Prescription Report Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.78.7",
+    "sopClassName": "Ophthalmic Axial Measurements Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.78.8",
+    "sopClassName": "Intraocular Lens Calculations Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.79.1",
+    "sopClassName": "Macular Grid Thickness and Volume Report Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.80.1",
+    "sopClassName": "Ophthalmic Visual Field Static Perimetry Measurements Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.81.1",
+    "sopClassName": "Ophthalmic Thickness Map Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.82.1",
+    "sopClassName": "Corneal Topography Map Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.88.11",
+    "sopClassName": "Basic Text SR Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.88.22",
+    "sopClassName": "Enhanced SR Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.88.33",
+    "sopClassName": "Comprehensive SR Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.88.34",
+    "sopClassName": "Comprehensive 3D SR Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.88.35",
+    "sopClassName": "Extensible SR Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.88.40",
+    "sopClassName": "Procedure Log Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.88.50",
+    "sopClassName": "Mammography CAD SR Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.88.59",
+    "sopClassName": "Key Object Selection Document Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.88.65",
+    "sopClassName": "Chest CAD SR Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.88.67",
+    "sopClassName": "X-Ray Radiation Dose SR Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.88.68",
+    "sopClassName": "Radiopharmaceutical Radiation Dose SR Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.88.69",
+    "sopClassName": "Colon CAD SR Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.88.70",
+    "sopClassName": "Implantation Plan SR Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.88.71",
+    "sopClassName": "Acquisition Context SR Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.88.72",
+    "sopClassName": "Simplified Adult Echo SR Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.88.73",
+    "sopClassName": "Patient Radiation Dose SR Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.88.74",
+    "sopClassName": "Planned Imaging Agent Administration SR Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.88.75",
+    "sopClassName": "Performed Imaging Agent Administration SR Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.88.76",
+    "sopClassName": "Enhanced X-Ray Radiation Dose SR Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.88.77",
+    "sopClassName": "Waveform Annotation SR Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.9.1.1",
+    "sopClassName": "12-lead ECG Waveform Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.9.1.2",
+    "sopClassName": "General ECG Waveform Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.9.1.3",
+    "sopClassName": "Ambulatory ECG Waveform Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.9.1.4",
+    "sopClassName": "General 32-bit ECG Waveform Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.9.2.1",
+    "sopClassName": "Hemodynamic Waveform Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.9.3.1",
+    "sopClassName": "Cardiac Electrophysiology Waveform Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.9.4.1",
+    "sopClassName": "Basic Voice Audio Waveform Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.9.4.2",
+    "sopClassName": "General Audio Waveform Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.9.5.1",
+    "sopClassName": "Arterial Pulse Waveform Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.9.6.1",
+    "sopClassName": "Respiratory Waveform Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.9.6.2",
+    "sopClassName": "Multi-channel Respiratory Waveform Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.9.7.1",
+    "sopClassName": "Routine Scalp Electroencephalogram Waveform Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.9.7.2",
+    "sopClassName": "Electromyogram Waveform Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.9.7.3",
+    "sopClassName": "Electrooculogram Waveform Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.9.7.4",
+    "sopClassName": "Sleep Electroencephalogram Waveform Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.9.8.1",
+    "sopClassName": "Body Position Waveform Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.90.1",
+    "sopClassName": "Content Assessment Results Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.1.1.91.1",
+    "sopClassName": "Microscopy Bulk Simple Annotations Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.34.10",
+    "sopClassName": "RT Brachy Application Setup Delivery Instruction Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.34.7",
+    "sopClassName": "RT Beams Delivery Instruction Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.38.1",
+    "sopClassName": "Hanging Protocol Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.39.1",
+    "sopClassName": "Color Palette Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.43.1",
+    "sopClassName": "Generic Implant Template Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.44.1",
+    "sopClassName": "Implant Assembly Template Storage",
+    "modules": []
+  },
+  {
+    "sopClassUID": "1.2.840.10008.5.1.4.45.1",
+    "sopClassName": "Implant Template Group Storage",
+    "modules": []
   }
 ]

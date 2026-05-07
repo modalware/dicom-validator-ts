@@ -39,6 +39,38 @@ describe('TagValidator', () => {
       expect(findings.length).toBeGreaterThan(0);
       expect(findings[0].severity).toBe('error');
     });
+
+    it('should validate each component of a multi-valued CS string individually', () => {
+      // Each component "ORIGINAL" and "PRIMARY" is valid CS (≤16 chars, uppercase)
+      const findings = validator.validateVR('(0008,0008)', 'ORIGINAL\\PRIMARY', 'CS');
+      expect(findings).toHaveLength(0);
+    });
+
+    it('should report errors for invalid components in a multi-valued CS string', () => {
+      // "ORIGINAL" is valid, "invalid_lower" has lowercase
+      const findings = validator.validateVR('(0008,0008)', 'ORIGINAL\\invalid_lower', 'CS');
+      expect(findings.length).toBeGreaterThan(0);
+      expect(findings[0].severity).toBe('error');
+    });
+
+    it('should validate each component of a multi-valued DS string individually', () => {
+      // Each component is a valid decimal string
+      const findings = validator.validateVR('(0028,1050)', '8191.5\\8191.5\\8191.5', 'DS');
+      expect(findings).toHaveLength(0);
+    });
+
+    it('should report errors only for invalid components in a multi-valued DS string', () => {
+      // "1.5" is valid, "abc" is not
+      const findings = validator.validateVR('(0028,1050)', '1.5\\abc', 'DS');
+      expect(findings.length).toBeGreaterThan(0);
+      expect(findings[0].severity).toBe('error');
+    });
+
+    it('should not report length errors for multi-valued strings when each component is within limits', () => {
+      // "16383" (5 chars) and "12287" (5 chars) and "24574" (5 chars) are all ≤16
+      const findings = validator.validateVR('(0028,1051)', '16383\\12287\\24574', 'DS');
+      expect(findings).toHaveLength(0);
+    });
   });
 
   describe('validateVM', () => {

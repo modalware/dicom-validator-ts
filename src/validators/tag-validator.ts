@@ -21,8 +21,11 @@ export class TagValidator {
   /**
    * Validate a tag value against its expected VR format.
    *
+   * For multi-valued tags (backslash-delimited), each value component
+   * is validated individually against the VR format constraints.
+   *
    * @param tagId - Tag identifier in "(GGGG,EEEE)" format
-   * @param value - The string value to validate
+   * @param value - The string value to validate (backslash-delimited for multi-valued)
    * @param expectedVR - The expected VR code (e.g., "DA", "UI")
    * @returns Array of validation findings (empty if valid)
    */
@@ -41,7 +44,15 @@ export class TagValidator {
       ];
     }
 
-    return validator(value, tagId);
+    // Split multi-valued strings and validate each component individually.
+    // VRs that are never multi-valued (LT, ST, UT, UR, UC) won't contain
+    // backslashes in valid data, so splitting is harmless for them.
+    const components = value.split('\\');
+    const findings: ValidationFinding[] = [];
+    for (const component of components) {
+      findings.push(...validator(component, tagId));
+    }
+    return findings;
   }
 
   /**
