@@ -12,6 +12,9 @@ hero:
     - theme: alt
       text: API Reference
       link: /api/functions
+    - theme: alt
+      text: Error Reference
+      link: /errors/validation-rules
 
 features:
   - icon: 🔍
