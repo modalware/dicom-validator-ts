@@ -1,6 +1,6 @@
 {
   "name": "dicom-validator-ts",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A TypeScript library for validating DICOM files against the DICOM standard (PS3.3, PS3.6). Provides both a programmatic API and CLI tool.",
   "type": "module",
   "engines": {
