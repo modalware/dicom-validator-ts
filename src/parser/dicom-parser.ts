@@ -163,7 +163,10 @@ export class DicomParser {
         continue;
       }
 
-      const vr = element.vr || this.lookupVR(tag);
+      // Determine VR: use dcmjs-provided VR if it's a real assignment (not "UN" fallback).
+      // When dcmjs returns "UN" for a tag not in its dictionary, it means the VR
+      // could not be determined — we store empty string to signal this to the validator.
+      const vr = this.resolveVR(element.vr, tag);
       const value = this.convertValue(element, vr);
 
       const dicomElement: DicomElement = {
@@ -208,9 +211,19 @@ export class DicomParser {
       const val = values[0];
       if (typeof val === 'string') return val;
       if (typeof val === 'number') return val;
-      if (val instanceof ArrayBuffer) return Buffer.from(val);
+      if (val instanceof ArrayBuffer) {
+        // When VR is undetermined (empty), interpret binary as UTF-8 string
+        // so the validator can attempt VR determination
+        if (!vr) {
+          return Buffer.from(val).toString('utf-8').replace(/\0+$/, '');
+        }
+        return Buffer.from(val);
+      }
       if (ArrayBuffer.isView(val)) {
         const view = val as ArrayBufferView;
+        if (!vr) {
+          return Buffer.from(view.buffer, view.byteOffset, view.byteLength).toString('utf-8').replace(/\0+$/, '');
+        }
         return Buffer.from(view.buffer, view.byteOffset, view.byteLength);
       }
       // Object (e.g., PersonName) — convert to string representation
@@ -271,7 +284,37 @@ export class DicomParser {
     if (entry) {
       return entry.vr.toUpperCase();
     }
-    return 'UN'; // Unknown
+    return ''; // Unknown — VR cannot be determined from dictionary
+  }
+
+  /**
+   * Resolve the VR for a parsed element.
+   *
+   * If dcmjs provides a real VR (not "UN"), use it directly.
+   * If dcmjs provides "UN" (its fallback for unknown tags), check our own
+   * dictionary lookup. If the tag is known to dcmjs, "UN" is preserved as
+   * a legitimate VR assignment. If not, it means the VR truly cannot be
+   * determined, so we return empty string to signal this to the validator.
+   */
+  private resolveVR(dcmjsVR: string | undefined, tag: string): string {
+    if (dcmjsVR && dcmjsVR !== 'UN') {
+      // dcmjs provided a definitive VR
+      return dcmjsVR;
+    }
+
+    if (dcmjsVR === 'UN') {
+      // Check if dcmjs actually knows this tag (meaning "UN" is intentional)
+      const dcmjsEntry = DicomMetaDictionary.dictionary[tag];
+      if (dcmjsEntry) {
+        // dcmjs knows the tag but the binary had VR "UN" — preserve it
+        return 'UN';
+      }
+      // dcmjs doesn't know this tag — "UN" is just a fallback, VR is undetermined
+      return '';
+    }
+
+    // No VR from dcmjs — look up in dcmjs dictionary
+    return this.lookupVR(tag);
   }
 
   /**

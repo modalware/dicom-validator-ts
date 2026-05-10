@@ -94,6 +94,7 @@
   { "tag": "(7FE0,0010)", "name": "Pixel Data", "keyword": "PixelData", "vr": "OW", "vm": "1", "retired": false },
   { "tag": "(0008,0040)", "name": "Data Set Type", "keyword": "DataSetType", "vr": "US", "vm": "1", "retired": true },
   { "tag": "(0008,0041)", "name": "Data Set Subtype", "keyword": "DataSetSubtype", "vr": "LO", "vm": "1", "retired": true },
+  { "tag": "(0008,9999)", "name": "VR Undetermined Test Tag", "keyword": "VRUndeterminedTestTag", "vr": "", "vm": "1", "retired": false },
   { "tag": "(0020,0030)", "name": "Image Position", "keyword": "ImagePosition", "vr": "DS", "vm": "3", "retired": true },
   { "tag": "(0020,0035)", "name": "Image Orientation", "keyword": "ImageOrientation", "vr": "DS", "vm": "6", "retired": true }
 ]

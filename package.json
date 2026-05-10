@@ -20,6 +20,7 @@
     "build": "tsup",
     "test": "vitest run",
     "lint": "tsc --noEmit",
+    "generate:test-dcm": "npx tsx scripts/generate-test-dcm.ts",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"

@@ -1,0 +1,222 @@
+/**
+ * Test file specifications manifest.
+ *
+ * Defines all 24 synthetic DICOM test files, each designed to trigger
+ * exactly one specific validation rule in dicom-validator-ts.
+ */
+
+import type { TestFileSpec } from './types.js';
+
+/**
+ * VR format test file specifications (15 files).
+ * Each file contains a single tag value that violates the corresponding VR format rule.
+ */
+export const vrTestFileSpecs: TestFileSpec[] = [
+  {
+    relativePath: 'vr/vr-format-AE.dcm',
+    targetRule: 'vr-format-AE',
+    expectedSeverity: 'error',
+    expectedTag: '(0008,0054)',
+    description: 'AE value exceeds maximum 16 characters',
+  },
+  {
+    relativePath: 'vr/vr-format-AS.dcm',
+    targetRule: 'vr-format-AS',
+    expectedSeverity: 'error',
+    expectedTag: '(0010,1010)',
+    description: 'AS value does not match NNN[DWMY] format',
+  },
+  {
+    relativePath: 'vr/vr-format-CS.dcm',
+    targetRule: 'vr-format-CS',
+    expectedSeverity: 'error',
+    expectedTag: '(0008,0060)',
+    description: 'CS value contains invalid characters or exceeds 16 characters',
+  },
+  {
+    relativePath: 'vr/vr-format-DA.dcm',
+    targetRule: 'vr-format-DA',
+    expectedSeverity: 'error',
+    expectedTag: '(0008,0020)',
+    description: 'DA value does not match YYYYMMDD format',
+  },
+  {
+    relativePath: 'vr/vr-format-DS.dcm',
+    targetRule: 'vr-format-DS',
+    expectedSeverity: 'error',
+    expectedTag: '(0018,0050)',
+    description: 'DS value is not a valid decimal string',
+  },
+  {
+    relativePath: 'vr/vr-format-IS.dcm',
+    targetRule: 'vr-format-IS',
+    expectedSeverity: 'error',
+    expectedTag: '(0020,0013)',
+    description: 'IS value is not a valid integer string',
+  },
+  {
+    relativePath: 'vr/vr-format-LO.dcm',
+    targetRule: 'vr-format-LO',
+    expectedSeverity: 'error',
+    expectedTag: '(0008,1030)',
+    description: 'LO value exceeds maximum 64 characters',
+  },
+  {
+    relativePath: 'vr/vr-format-LT.dcm',
+    targetRule: 'vr-format-LT',
+    expectedSeverity: 'error',
+    expectedTag: '(0010,21B0)',
+    description: 'LT value exceeds maximum 10240 characters',
+  },
+  {
+    relativePath: 'vr/vr-format-PN.dcm',
+    targetRule: 'vr-format-PN',
+    expectedSeverity: 'error',
+    expectedTag: '(0010,0010)',
+    description: 'PN component group exceeds maximum 64 characters',
+  },
+  {
+    relativePath: 'vr/vr-format-SH.dcm',
+    targetRule: 'vr-format-SH',
+    expectedSeverity: 'error',
+    expectedTag: '(0010,0020)',
+    description: 'SH value exceeds maximum 16 characters',
+  },
+  {
+    relativePath: 'vr/vr-format-ST.dcm',
+    targetRule: 'vr-format-ST',
+    expectedSeverity: 'error',
+    expectedTag: '(0008,0081)',
+    description: 'ST value exceeds maximum 1024 characters',
+  },
+  {
+    relativePath: 'vr/vr-format-TM.dcm',
+    targetRule: 'vr-format-TM',
+    expectedSeverity: 'error',
+    expectedTag: '(0008,0030)',
+    description: 'TM value does not match valid time format',
+  },
+  {
+    relativePath: 'vr/vr-format-UI.dcm',
+    targetRule: 'vr-format-UI',
+    expectedSeverity: 'error',
+    expectedTag: '(0020,000D)',
+    description: 'UI value contains invalid characters',
+  },
+  {
+    relativePath: 'vr/vr-format-UR.dcm',
+    targetRule: 'vr-format-UR',
+    expectedSeverity: 'error',
+    expectedTag: '(0008,0120)',
+    description: 'UR value contains trailing spaces',
+  },
+  {
+    relativePath: 'vr/vr-format-UT.dcm',
+    targetRule: 'vr-format-UT',
+    expectedSeverity: 'error',
+    expectedTag: '(0008,0119)',
+    description: 'UT value exceeds maximum length',
+  },
+];
+
+/**
+ * VM constraint test file specifications (2 files).
+ * Each file contains a tag with a value multiplicity violation.
+ */
+export const vmTestFileSpecs: TestFileSpec[] = [
+  {
+    relativePath: 'vm/vm-constraint-too-many.dcm',
+    targetRule: 'vm-constraint',
+    expectedSeverity: 'error',
+    expectedTag: '(0020,0037)',
+    description: 'Tag value has too many values exceeding maximum VM',
+  },
+  {
+    relativePath: 'vm/vm-constraint-too-few.dcm',
+    targetRule: 'vm-constraint',
+    expectedSeverity: 'error',
+    expectedTag: '(0020,0037)',
+    description: 'Tag value has too few values below minimum VM',
+  },
+];
+
+/**
+ * Module validation test file specifications (3 files).
+ * Each file triggers a module-level validation rule by omitting or emptying required attributes.
+ */
+export const moduleTestFileSpecs: TestFileSpec[] = [
+  {
+    relativePath: 'module/type1-missing.dcm',
+    targetRule: 'type1-missing',
+    expectedSeverity: 'error',
+    expectedTag: '(0008,0060)',
+    description: 'Type 1 attribute (Modality) is missing from the dataset',
+  },
+  {
+    relativePath: 'module/type1-empty.dcm',
+    targetRule: 'type1-empty',
+    expectedSeverity: 'error',
+    expectedTag: '(0008,0060)',
+    description: 'Type 1 attribute (Modality) has a zero-length value',
+  },
+  {
+    relativePath: 'module/type2-missing.dcm',
+    targetRule: 'type2-missing',
+    expectedSeverity: 'warning',
+    expectedTag: '(0008,0090)',
+    description: 'Type 2 attribute (Referring Physician Name) is missing from the dataset',
+  },
+];
+
+/**
+ * IOD validation test file specifications (2 files).
+ * Each file triggers an IOD-level validation rule related to SOP Class UID.
+ */
+export const iodTestFileSpecs: TestFileSpec[] = [
+  {
+    relativePath: 'iod/iod-sop-class-missing.dcm',
+    targetRule: 'iod-sop-class-missing',
+    expectedSeverity: 'error',
+    expectedTag: '(0008,0016)',
+    description: 'SOP Class UID tag is entirely absent from the dataset',
+  },
+  {
+    relativePath: 'iod/iod-sop-class-unknown.dcm',
+    targetRule: 'iod-sop-class-unknown',
+    expectedSeverity: 'error',
+    expectedTag: '(0008,0016)',
+    description: 'SOP Class UID is set to an unrecognized value (9.9.9.9.9)',
+  },
+];
+
+/**
+ * Tag validation test file specifications (2 files).
+ * Each file triggers a tag-level validation warning.
+ */
+export const tagTestFileSpecs: TestFileSpec[] = [
+  {
+    relativePath: 'tag/vr-unknown.dcm',
+    targetRule: 'vr-unknown',
+    expectedSeverity: 'warning',
+    expectedTag: '(0008,1030)',
+    description: 'Tag has a VR that is not registered in the validator',
+  },
+  {
+    relativePath: 'tag/vr-undetermined.dcm',
+    targetRule: 'vr-undetermined',
+    expectedSeverity: 'warning',
+    expectedTag: '(0008,9999)',
+    description: 'Tag VR cannot be determined from element or dictionary',
+  },
+];
+
+/**
+ * Complete array of all 24 test file specifications.
+ */
+export const allTestFileSpecs: TestFileSpec[] = [
+  ...vrTestFileSpecs,
+  ...vmTestFileSpecs,
+  ...moduleTestFileSpecs,
+  ...iodTestFileSpecs,
+  ...tagTestFileSpecs,
+];
