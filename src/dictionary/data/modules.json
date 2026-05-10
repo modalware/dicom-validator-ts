@@ -33,6 +33,28 @@
     ]
   },
   {
+    "moduleId": "general-image",
+    "moduleName": "General Image",
+    "attributes": [
+      { "tag": "(0020,0013)", "name": "Instance Number", "type": "1" },
+      { "tag": "(0008,0023)", "name": "Content Date", "type": "2" },
+      { "tag": "(0008,0033)", "name": "Content Time", "type": "2" },
+      { "tag": "(0020,0020)", "name": "Patient Orientation", "type": "2" },
+      { "tag": "(0008,0008)", "name": "Image Type", "type": "2C", "conditionText": "Required if the image is a Derived, Reformatted, or Enhanced image" },
+      { "tag": "(0020,0012)", "name": "Acquisition Number", "type": "3" },
+      { "tag": "(0008,0022)", "name": "Acquisition Date", "type": "3" },
+      { "tag": "(0008,0032)", "name": "Acquisition Time", "type": "3" }
+    ]
+  },
+  {
+    "moduleId": "frame-of-reference",
+    "moduleName": "Frame of Reference",
+    "attributes": [
+      { "tag": "(0020,0052)", "name": "Frame of Reference UID", "type": "1" },
+      { "tag": "(0020,1040)", "name": "Position Reference Indicator", "type": "2" }
+    ]
+  },
+  {
     "moduleId": "ct-image",
     "moduleName": "CT Image",
     "attributes": [
@@ -41,6 +63,47 @@
       { "tag": "(0018,0060)", "name": "KVP", "type": "2" },
       { "tag": "(0028,1050)", "name": "Window Center", "type": "1C", "conditionText": "Required if Window Width (0028,1051) is present" },
       { "tag": "(0028,1051)", "name": "Window Width", "type": "1C", "conditionText": "Required if Window Center (0028,1050) is present" }
+    ]
+  },
+  {
+    "moduleId": "general-equipment",
+    "moduleName": "General Equipment",
+    "attributes": [
+      { "tag": "(0008,0070)", "name": "Manufacturer", "type": "1" },
+      { "tag": "(0008,0080)", "name": "Institution Name", "type": "2" },
+      { "tag": "(0008,0081)", "name": "Institution Address", "type": "3" },
+      { "tag": "(0008,1010)", "name": "Station Name", "type": "2" },
+      { "tag": "(0008,1040)", "name": "Institutional Department Name", "type": "3" },
+      { "tag": "(0008,1090)", "name": "Manufacturer's Model Name", "type": "2" },
+      { "tag": "(0018,1000)", "name": "Device Serial Number", "type": "3" },
+      { "tag": "(0018,1020)", "name": "Software Versions", "type": "2" }
+    ]
+  },
+  {
+    "moduleId": "image-plane",
+    "moduleName": "Image Plane",
+    "attributes": [
+      { "tag": "(0028,0030)", "name": "Pixel Spacing", "type": "1" },
+      { "tag": "(0020,0037)", "name": "Image Orientation (Patient)", "type": "1" },
+      { "tag": "(0020,0032)", "name": "Image Position (Patient)", "type": "1" },
+      { "tag": "(0018,0050)", "name": "Slice Thickness", "type": "2" },
+      { "tag": "(0020,1041)", "name": "Slice Location", "type": "2" }
+    ]
+  },
+  {
+    "moduleId": "image-pixel",
+    "moduleName": "Image Pixel",
+    "attributes": [
+      { "tag": "(0028,0002)", "name": "Samples per Pixel", "type": "1" },
+      { "tag": "(0028,0004)", "name": "Photometric Interpretation", "type": "1" },
+      { "tag": "(0028,0006)", "name": "Planar Configuration", "type": "1C", "conditionText": "Required if Samples per Pixel (0028,0002) has a value of more than 1" },
+      { "tag": "(0028,0010)", "name": "Rows", "type": "1" },
+      { "tag": "(0028,0011)", "name": "Columns", "type": "1" },
+      { "tag": "(0028,0100)", "name": "Bits Allocated", "type": "1" },
+      { "tag": "(0028,0101)", "name": "Bits Stored", "type": "1" },
+      { "tag": "(0028,0102)", "name": "High Bit", "type": "1" },
+      { "tag": "(0028,0103)", "name": "Pixel Representation", "type": "1" },
+      { "tag": "(7FE0,0010)", "name": "Pixel Data", "type": "1" }
     ]
   }
 ]

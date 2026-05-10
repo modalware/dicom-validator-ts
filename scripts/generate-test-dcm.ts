@@ -191,6 +191,11 @@ export async function generateVrTestFiles(outputDir: string): Promise<void> {
  * - type1-missing.dcm: Omits Modality (0008,0060), a Type 1 attribute in the General Series module
  * - type1-empty.dcm: Sets Modality (0008,0060) to a zero-length value
  * - type2-missing.dcm: Omits Referring Physician's Name (0008,0090), a Type 2 attribute in General Study module
+ * - type1-missing-manufacturer.dcm: Omits Manufacturer (0008,0070), a Type 1 attribute in General Equipment module
+ * - type1-missing-pixel-rows.dcm: Omits Rows (0028,0010), a Type 1 attribute in Image Pixel module
+ * - type2-missing-content-date.dcm: Omits Content Date (0008,0023), a Type 2 attribute in General Image module
+ * - type1-missing-pixel-spacing.dcm: Omits Pixel Spacing (0028,0030), a Type 1 attribute in Image Plane module
+ * - type1-missing-frame-of-ref-uid.dcm: Omits Frame of Reference UID (0020,0052), a Type 1 attribute in Frame of Reference module
  *
  * @param outputDir - Directory where module test files will be written
  */
@@ -214,6 +219,46 @@ export async function generateModuleTestFiles(outputDir: string): Promise<void> 
   type2Missing.setBaseSopClass(CT_IMAGE_STORAGE_UID);
   type2Missing.removeElement('(0008,0090)');
   await type2Missing.writeFile(resolve(moduleDir, 'type2-missing.dcm'));
+
+  // type1-missing-manufacturer.dcm — omit Manufacturer (Type 1 in General Equipment module)
+  {
+    const builder = new DicomFileBuilder();
+    builder.setBaseSopClass(CT_IMAGE_STORAGE_UID);
+    builder.removeElement('(0008,0070)');
+    await builder.writeFile(resolve(moduleDir, 'type1-missing-manufacturer.dcm'));
+  }
+
+  // type1-missing-pixel-rows.dcm — omit Rows (Type 1 in Image Pixel module)
+  {
+    const builder = new DicomFileBuilder();
+    builder.setBaseSopClass(CT_IMAGE_STORAGE_UID);
+    builder.removeElement('(0028,0010)');
+    await builder.writeFile(resolve(moduleDir, 'type1-missing-pixel-rows.dcm'));
+  }
+
+  // type2-missing-content-date.dcm — omit Content Date (Type 2 in General Image module)
+  {
+    const builder = new DicomFileBuilder();
+    builder.setBaseSopClass(CT_IMAGE_STORAGE_UID);
+    builder.removeElement('(0008,0023)');
+    await builder.writeFile(resolve(moduleDir, 'type2-missing-content-date.dcm'));
+  }
+
+  // type1-missing-pixel-spacing.dcm — omit Pixel Spacing (Type 1 in Image Plane module)
+  {
+    const builder = new DicomFileBuilder();
+    builder.setBaseSopClass(CT_IMAGE_STORAGE_UID);
+    builder.removeElement('(0028,0030)');
+    await builder.writeFile(resolve(moduleDir, 'type1-missing-pixel-spacing.dcm'));
+  }
+
+  // type1-missing-frame-of-ref-uid.dcm — omit Frame of Reference UID (Type 1 in Frame of Reference module)
+  {
+    const builder = new DicomFileBuilder();
+    builder.setBaseSopClass(CT_IMAGE_STORAGE_UID);
+    builder.removeElement('(0020,0052)');
+    await builder.writeFile(resolve(moduleDir, 'type1-missing-frame-of-ref-uid.dcm'));
+  }
 }
 
 /**
@@ -374,7 +419,7 @@ async function main(): Promise<void> {
 
   console.log('Generating module validation test files...');
   await generateModuleTestFiles(OUTPUT_DIR);
-  console.log('  ✓ 3 module validation test files generated');
+  console.log('  ✓ 8 module validation test files generated');
 
   console.log('Generating VM constraint test files...');
   await generateVmTestFiles(OUTPUT_DIR);

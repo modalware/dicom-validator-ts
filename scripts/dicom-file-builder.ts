@@ -54,8 +54,11 @@ export class DicomFileBuilder {
    * Set the SOP Class UID and add all minimum required attributes
    * for a valid CT Image Storage DICOM file.
    *
-   * Adds: Patient Name, Patient ID, Study/Series/SOP Instance UIDs,
-   * Modality, Study Date, Study Time, Referring Physician, Instance Number.
+   * Adds all Type 1 attributes from: Patient, General Study, General Series,
+   * CT Image, General Equipment, Frame of Reference, General Image,
+   * Image Plane, and Image Pixel modules.
+   * Also adds Type 2 attributes from newly added modules with empty or
+   * placeholder values.
    */
   setBaseSopClass(sopClassUID: string): void {
     this.sopClassUID = sopClassUID;
@@ -96,6 +99,68 @@ export class DicomFileBuilder {
 
     // Image Type (0008,0008) - CS (required Type 1 for CT Image Storage)
     this.dataset['00080008'] = { vr: 'CS', Value: ['ORIGINAL', 'PRIMARY', 'AXIAL'] };
+
+    // --- General Equipment Module (Type 1) ---
+    // Manufacturer (0008,0070) - LO
+    this.dataset['00080070'] = { vr: 'LO', Value: ['TEST_MANUFACTURER'] };
+
+    // --- Frame of Reference Module (Type 1) ---
+    // Frame of Reference UID (0020,0052) - UI
+    this.dataset['00200052'] = { vr: 'UI', Value: ['1.2.826.0.1.3680043.8.1055.1.20240101120000.4'] };
+
+    // --- Image Plane Module (Type 1) ---
+    // Pixel Spacing (0028,0030) - DS, VM=2
+    this.dataset['00280030'] = { vr: 'DS', Value: ['1.0', '1.0'] };
+
+    // Image Orientation Patient (0020,0037) - DS, VM=6
+    this.dataset['00200037'] = { vr: 'DS', Value: ['1.0', '0.0', '0.0', '0.0', '1.0', '0.0'] };
+
+    // Image Position Patient (0020,0032) - DS, VM=3
+    this.dataset['00200032'] = { vr: 'DS', Value: ['0.0', '0.0', '0.0'] };
+
+    // --- Image Pixel Module (Type 1) ---
+    // Samples per Pixel (0028,0002) - US
+    this.dataset['00280002'] = { vr: 'US', Value: [1] };
+
+    // Photometric Interpretation (0028,0004) - CS
+    this.dataset['00280004'] = { vr: 'CS', Value: ['MONOCHROME2'] };
+
+    // Rows (0028,0010) - US
+    this.dataset['00280010'] = { vr: 'US', Value: [1] };
+
+    // Columns (0028,0011) - US
+    this.dataset['00280011'] = { vr: 'US', Value: [1] };
+
+    // Bits Allocated (0028,0100) - US
+    this.dataset['00280100'] = { vr: 'US', Value: [16] };
+
+    // Bits Stored (0028,0101) - US
+    this.dataset['00280101'] = { vr: 'US', Value: [12] };
+
+    // High Bit (0028,0102) - US
+    this.dataset['00280102'] = { vr: 'US', Value: [11] };
+
+    // Pixel Representation (0028,0103) - US
+    this.dataset['00280103'] = { vr: 'US', Value: [0] };
+
+    // Pixel Data (7FE0,0010) - OW, minimal 1x1 pixel (2 bytes)
+    this.dataset['7FE00010'] = { vr: 'OW', Value: [new Uint16Array([0]).buffer] };
+
+    // --- Type 2 attributes from new modules (empty or placeholder values) ---
+    // Position Reference Indicator (0020,1040) - LO (Frame of Reference, Type 2)
+    this.dataset['00201040'] = { vr: 'LO', Value: [] };
+
+    // Content Date (0008,0023) - DA (General Image, Type 2)
+    this.dataset['00080023'] = { vr: 'DA', Value: [] };
+
+    // Content Time (0008,0033) - TM (General Image, Type 2)
+    this.dataset['00080033'] = { vr: 'TM', Value: [] };
+
+    // Patient Orientation (0020,0020) - CS (General Image, Type 2)
+    this.dataset['00200020'] = { vr: 'CS', Value: [] };
+
+    // Slice Thickness (0018,0050) - DS (Image Plane, Type 2)
+    this.dataset['00180050'] = { vr: 'DS', Value: ['1.0'] };
   }
 
   /**

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-10T05:44:10.994Z",
+  "generatedAt": "2026-05-10T06:37:49.297Z",
   "generatorVersion": "1.0.0",
   "files": [
     {
@@ -141,6 +141,41 @@
       "expectedSeverity": "warning",
       "expectedTag": "(0008,0090)",
       "description": "Type 2 attribute (Referring Physician Name) is missing from the dataset"
+    },
+    {
+      "relativePath": "module/type1-missing-manufacturer.dcm",
+      "targetRule": "type1-missing",
+      "expectedSeverity": "error",
+      "expectedTag": "(0008,0070)",
+      "description": "Type 1 attribute (Manufacturer) is missing from the General Equipment module"
+    },
+    {
+      "relativePath": "module/type1-missing-pixel-rows.dcm",
+      "targetRule": "type1-missing",
+      "expectedSeverity": "error",
+      "expectedTag": "(0028,0010)",
+      "description": "Type 1 attribute (Rows) is missing from the Image Pixel module"
+    },
+    {
+      "relativePath": "module/type2-missing-content-date.dcm",
+      "targetRule": "type2-missing",
+      "expectedSeverity": "warning",
+      "expectedTag": "(0008,0023)",
+      "description": "Type 2 attribute (Content Date) is missing from the General Image module"
+    },
+    {
+      "relativePath": "module/type1-missing-pixel-spacing.dcm",
+      "targetRule": "type1-missing",
+      "expectedSeverity": "error",
+      "expectedTag": "(0028,0030)",
+      "description": "Type 1 attribute (Pixel Spacing) is missing from the Image Plane module"
+    },
+    {
+      "relativePath": "module/type1-missing-frame-of-ref-uid.dcm",
+      "targetRule": "type1-missing",
+      "expectedSeverity": "error",
+      "expectedTag": "(0020,0052)",
+      "description": "Type 1 attribute (Frame of Reference UID) is missing from the Frame of Reference module"
     },
     {
       "relativePath": "iod/iod-sop-class-missing.dcm",

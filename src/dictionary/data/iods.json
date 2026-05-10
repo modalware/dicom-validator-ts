@@ -219,6 +219,11 @@
         "usage": "M"
       },
       {
+        "moduleId": "frame-of-reference",
+        "moduleName": "Frame of Reference",
+        "usage": "M"
+      },
+      {
         "moduleId": "general-equipment",
         "moduleName": "General Equipment",
         "usage": "M"

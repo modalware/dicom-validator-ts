@@ -1,7 +1,7 @@
 /**
  * Test file specifications manifest.
  *
- * Defines all 24 synthetic DICOM test files, each designed to trigger
+ * Defines all 29 synthetic DICOM test files, each designed to trigger
  * exactly one specific validation rule in dicom-validator-ts.
  */
 
@@ -141,7 +141,7 @@ export const vmTestFileSpecs: TestFileSpec[] = [
 ];
 
 /**
- * Module validation test file specifications (3 files).
+ * Module validation test file specifications (8 files).
  * Each file triggers a module-level validation rule by omitting or emptying required attributes.
  */
 export const moduleTestFileSpecs: TestFileSpec[] = [
@@ -165,6 +165,41 @@ export const moduleTestFileSpecs: TestFileSpec[] = [
     expectedSeverity: 'warning',
     expectedTag: '(0008,0090)',
     description: 'Type 2 attribute (Referring Physician Name) is missing from the dataset',
+  },
+  {
+    relativePath: 'module/type1-missing-manufacturer.dcm',
+    targetRule: 'type1-missing',
+    expectedSeverity: 'error',
+    expectedTag: '(0008,0070)',
+    description: 'Type 1 attribute (Manufacturer) is missing from the General Equipment module',
+  },
+  {
+    relativePath: 'module/type1-missing-pixel-rows.dcm',
+    targetRule: 'type1-missing',
+    expectedSeverity: 'error',
+    expectedTag: '(0028,0010)',
+    description: 'Type 1 attribute (Rows) is missing from the Image Pixel module',
+  },
+  {
+    relativePath: 'module/type2-missing-content-date.dcm',
+    targetRule: 'type2-missing',
+    expectedSeverity: 'warning',
+    expectedTag: '(0008,0023)',
+    description: 'Type 2 attribute (Content Date) is missing from the General Image module',
+  },
+  {
+    relativePath: 'module/type1-missing-pixel-spacing.dcm',
+    targetRule: 'type1-missing',
+    expectedSeverity: 'error',
+    expectedTag: '(0028,0030)',
+    description: 'Type 1 attribute (Pixel Spacing) is missing from the Image Plane module',
+  },
+  {
+    relativePath: 'module/type1-missing-frame-of-ref-uid.dcm',
+    targetRule: 'type1-missing',
+    expectedSeverity: 'error',
+    expectedTag: '(0020,0052)',
+    description: 'Type 1 attribute (Frame of Reference UID) is missing from the Frame of Reference module',
   },
 ];
 
@@ -211,7 +246,7 @@ export const tagTestFileSpecs: TestFileSpec[] = [
 ];
 
 /**
- * Complete array of all 24 test file specifications.
+ * Complete array of all 29 test file specifications.
  */
 export const allTestFileSpecs: TestFileSpec[] = [
   ...vrTestFileSpecs,

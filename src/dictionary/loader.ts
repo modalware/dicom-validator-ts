@@ -147,6 +147,7 @@ export class DictionaryLoader {
    *
    * Supports common DICOM condition patterns:
    * - "Required if <Tag Name> (<GGGG,EEEE>) is present"
+   * - "Required if <Tag Name> (<GGGG,EEEE>) has a value of more than <N>"
    * - "Required if <Tag Name> (<GGGG,EEEE>) is <value>"
    *
    * Falls back to a tag_present node with a placeholder for unparseable conditions.
@@ -158,6 +159,18 @@ export class DictionaryLoader {
     );
     if (presentMatch) {
       return { type: 'tag_present', tag: `(${presentMatch[1].toUpperCase()})` };
+    }
+
+    // Pattern: "Required if <Name> (GGGG,EEEE) has a value of more than <N>"
+    const greaterThanMatch = text.match(
+      /\(([0-9A-Fa-f]{4},[0-9A-Fa-f]{4})\)\s+has\s+a\s+value\s+of\s+more\s+than\s+(\d+)/i
+    );
+    if (greaterThanMatch) {
+      return {
+        type: 'tag_greater_than',
+        tag: `(${greaterThanMatch[1].toUpperCase()})`,
+        value: parseInt(greaterThanMatch[2], 10),
+      };
     }
 
     // Pattern: "Required if <Name> (GGGG,EEEE) is <value>"

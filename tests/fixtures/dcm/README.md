@@ -24,6 +24,11 @@ Generated synthetic DICOM files for validation testing.
 | module/type1-missing.dcm | type1-missing | error | Type 1 attribute (Modality) is missing from the dataset |
 | module/type1-empty.dcm | type1-empty | error | Type 1 attribute (Modality) has a zero-length value |
 | module/type2-missing.dcm | type2-missing | warning | Type 2 attribute (Referring Physician Name) is missing from the dataset |
+| module/type1-missing-manufacturer.dcm | type1-missing | error | Type 1 attribute (Manufacturer) is missing from the General Equipment module |
+| module/type1-missing-pixel-rows.dcm | type1-missing | error | Type 1 attribute (Rows) is missing from the Image Pixel module |
+| module/type2-missing-content-date.dcm | type2-missing | warning | Type 2 attribute (Content Date) is missing from the General Image module |
+| module/type1-missing-pixel-spacing.dcm | type1-missing | error | Type 1 attribute (Pixel Spacing) is missing from the Image Plane module |
+| module/type1-missing-frame-of-ref-uid.dcm | type1-missing | error | Type 1 attribute (Frame of Reference UID) is missing from the Frame of Reference module |
 | iod/iod-sop-class-missing.dcm | iod-sop-class-missing | error | SOP Class UID tag is entirely absent from the dataset |
 | iod/iod-sop-class-unknown.dcm | iod-sop-class-unknown | error | SOP Class UID is set to an unrecognized value (9.9.9.9.9) |
 | tag/vr-unknown.dcm | vr-unknown | warning | Tag has a VR that is not registered in the validator |
