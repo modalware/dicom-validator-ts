@@ -92,6 +92,35 @@ npx vitest run --coverage
 
 ---
 
+## Generating Test DCM Files
+
+Test DICOM files are already pre-generated. If you need to regenerate them:
+
+```bash
+npm run generate:test-dcm
+```
+
+---
+
+## validation-test-dcm Tests
+
+### One-time setup: Python virtual environment
+
+```bash
+python3 -m venv .venv
+.venv/bin/pip install -r requirements-test.txt
+```
+
+### Running the tests
+
+If `.venv/bin/validate_iods` is found, comparison tests against the Python reference validator will also run.
+
+```bash
+npx vitest run src/validation-test-dcm/
+```
+
+---
+
 ## Documentation
 
 ```bash
